@@ -314,6 +314,8 @@ namespace SpaceInvaders
         /// <param name="deltaT">The time delta since the last update.</param>
         private void EnemyShoot(Game gameInstance, double deltaT)
         {
+            if (cpt > 0) return;
+
             // Update the position of each enemy and handle their shooting
             foreach (SpaceShip enemy in enemyShips)
             {
